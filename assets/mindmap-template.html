@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>阶段八 Agent开发学习总结 · 思维导图</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230F766E'/%3E%3Ctext x='32' y='44' font-size='36' text-anchor='middle' fill='white'%3EA%3C/text%3E%3C/svg%3E">
+<style>
+  html, body { margin:0; padding:0; background:#f8fafc; }
+  .markmap { width:100vw; height:100vh; }
+  svg { display:block; }
+</style>
+</head>
+<body>
+<div class="markmap">
+<script type="text/template">
+# 阶段八：Agent开发精讲与实战
+## 里程碑一：Agent核心概念 & 三大范式
+### Agent 与 Workflow 的区别
+### Agent 核心模块：LLM / Prompt / Tools / Memory / Planning / Action
+### ReAct 范式：Reason + Act 交替循环（思考 → 行动 → 观察 → 再思考）
+### Plan-and-Solve：先规划再执行，复杂任务拆子任务
+### Reflection：自我反思（生成 → 批判 → 修正）
+### 实战经验：Tool 设计、Prompt 约束、循环终止条件
+## 里程碑二：LangGraph 框架
+### 为什么用框架：状态管理 / 编排 / 可观测
+### 状态图 StateGraph：节点 + 边 + 状态流转
+### 中间件 Middleware：日志 / 限流 / 鉴权拦截
+### 记忆管理：短期（会话内）/ 长期（跨会话）
+### 多 Agent 编排：监督者模式 / 多意图 Agent
+### 框架对比：LangGraph / AutoGen / CrewAI 选型
+## 里程碑三：RAG & 多模态 RAG
+### RAG 全链路：索引（切分→向量化→存储）→ 检索 → 生成
+### 工业落地：分块策略 / 元数据 / 混合检索 / 重排
+### 全链路耗时优化：并行索引 / 缓存 / 召回裁剪
+### 多模态 RAG 三方案
+#### 方案一 Captioning：图像→文字描述→文本 RAG
+#### 方案二 CLIP：图文统一向量空间检索
+#### 方案三 ColPali：视觉语言模型端到端
+### 滑窗分片问题与改进
+## 里程碑四：GraphRAG & 上下文工程
+### 传统 RAG 痛点：全局问题 / 跨文档关系 / 多跳推理
+### GraphRAG 索引：实体抽取 → 知识图谱 → 社区检测 → 摘要索引
+### GraphRAG 查询：局部检索（实体/子图）+ 全局检索（社区摘要）
+### 局限：构建成本 / 增量更新 / 抽取质量
+### 上下文工程 Context Engineering
+#### 上下文结构化管理 / 压缩 / 记忆
+#### 避免上下文退化
+## 里程碑五：协议体系 & DeepResearch
+### MCP：模型标准化接入外部工具（工具 / 资源 / 提示词）
+### A2A：Agent 之间点对点通信（能力发现 / 任务交接）
+### ANP：分布式 Agent 网络动态发现与调度
+### DeepAgents / DeepResearch
+#### 规划 → 搜索 → 阅读 → 综合 → 报告
+### Agent Skills：可复用技能包（Text2SQL）
+## 里程碑六：Agent + Function Calling 训练微调
+### 环境搭建：数据集 / 模型 / 训练框架
+### Function Calling：tool schema → 模型输出调用
+### 数据构造：对话 + 工具调用标注
+### 模型训练：LoRA / 全参微调
+### 评测与训练结果可视化
+</script>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/markmap-autoloader@0.15.4"></script>
+</body>
+</html>
